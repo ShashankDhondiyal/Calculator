@@ -3,17 +3,18 @@ package com.myapps;
 import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.shape.Rectangle;
 
 public class calculatorController {
-    
-    private String text;
-
-    @FXML
-    private Text DisplayText;
 
     @FXML
     private Rectangle Display;
+
+    @FXML
+    private Label displayLabel;
+
+    private Logic logic = new Logic();
 
     @FXML
     private void switchToSecondary() throws IOException {
@@ -21,16 +22,15 @@ public class calculatorController {
     }
 
     @FXML
-    private void handleNumberClick(javafx.event.ActionEvent event) throws IOException {
+    public void handleButtonClick(javafx.event.ActionEvent event) throws IOException {
         Button clickedButton = (Button) event.getSource();
-        text = clickedButton.getText();
-        DisplayText.setText(text);
+        String number = clickedButton.getText();
+        logic.addToEquation(number);
+        updateDisplay();
     }
 
-    @FXML
-    private void handleOperatorClick() throws IOException {
-        // display on display 
-        // add to calculator class arraylist
+    private void updateDisplay() {
+        displayLabel.setText(logic.getEquation());
     }
 
     @FXML
@@ -40,6 +40,7 @@ public class calculatorController {
 
     @FXML
     private void handleClear() throws IOException {
-        // set display to clear
+        logic.clearEquation();
+        updateDisplay();
     }
 }
