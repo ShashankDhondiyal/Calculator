@@ -2,10 +2,12 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Rectangle?>
 
@@ -41,15 +43,20 @@
                   <Button fx:id="button2" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="40.0" maxWidth="60.0" mnemonicParsing="false" onAction="#handleNumberClick" style="-fx-background-color: lightgray;" text="2" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
                   <Button fx:id="button1" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="40.0" maxWidth="60.0" mnemonicParsing="false" onAction="#handleNumberClick" style="-fx-background-color: lightgray;" text="1" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
                   <Button fx:id="buttonMultiply" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="40.0" maxWidth="60.0" mnemonicParsing="false" onAction="#handleOperatorClick" style="-fx-background-color: lightgray;" text="*" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-                  <Button fx:id="buttonSix" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="40.0" maxWidth="60.0" mnemonicParsing="false" onAction="#handleNumberClick" style="-fx-background-color: lightgray;" text="6" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                  <Button fx:id="button6" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="40.0" maxWidth="60.0" mnemonicParsing="false" onAction="#handleNumberClick" style="-fx-background-color: lightgray;" text="6" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
                   <Button fx:id="button5" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="40.0" maxWidth="60.0" mnemonicParsing="false" onAction="#handleNumberClick" style="-fx-background-color: lightgray;" text="5" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
                   <Button fx:id="button4" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="40.0" maxWidth="60.0" mnemonicParsing="false" onAction="#handleNumberClick" style="-fx-background-color: lightgray;" text="4" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
                   <Button fx:id="buttonDivide" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="40.0" maxWidth="60.0" mnemonicParsing="false" onAction="#handleOperatorClick" style="-fx-background-color: lightgray;" text="/" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-                  <Button fx:id="buttonNine" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="40.0" maxWidth="60.0" mnemonicParsing="false" onAction="#handleNumberClick" style="-fx-background-color: lightgray;" text="9" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                  <Button fx:id="button9" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="40.0" maxWidth="60.0" mnemonicParsing="false" onAction="#handleNumberClick" style="-fx-background-color: lightgray;" text="9" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
                   <Button fx:id="button8" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="40.0" maxWidth="60.0" mnemonicParsing="false" onAction="#handleNumberClick" style="-fx-background-color: lightgray;" text="8" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
                </children>
             </GridPane>
             <Rectangle fx:id="Display" arcHeight="5.0" arcWidth="5.0" fill="#b2b2b2" height="180.0" layoutX="20.0" stroke="BLACK" strokeType="INSIDE" width="400.0" />
+            <StackPane layoutX="21.0" prefHeight="180.0" prefWidth="400.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="174.0" prefWidth="400.0" />
+               </children>
+            </StackPane>
          </children>
       </AnchorPane>
    </children>

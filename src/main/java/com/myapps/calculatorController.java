@@ -2,8 +2,18 @@ package com.myapps;
 
 import java.io.IOException;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.shape.Rectangle;
 
 public class calculatorController {
+    
+    private String text;
+
+    @FXML
+    private Text DisplayText;
+
+    @FXML
+    private Rectangle Display;
 
     @FXML
     private void switchToSecondary() throws IOException {
@@ -11,9 +21,10 @@ public class calculatorController {
     }
 
     @FXML
-    private void handleNumberClick() throws IOException {
-        // display on display
-        // add to calculator class arraylist
+    private void handleNumberClick(javafx.event.ActionEvent event) throws IOException {
+        Button clickedButton = (Button) event.getSource();
+        text = clickedButton.getText();
+        DisplayText.setText(text);
     }
 
     @FXML
